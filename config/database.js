@@ -1,6 +1,7 @@
 // db.js
 import { Sequelize } from 'sequelize';
 import dotenv from 'dotenv';
+import pg from 'pg';
 
 dotenv.config({ quiet: true });
 
@@ -8,6 +9,7 @@ const connectionString = process.env.DB_URL || process.env.DATABASE_URL;
 
 const commonOptions = {
   dialect: 'postgres',
+  dialectModule: pg,
   logging: false,
   pool: {
     max: 5,
