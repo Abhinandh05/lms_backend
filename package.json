@@ -1,0 +1,46 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "migrate": "npx sequelize-cli db:migrate --config config/sequelize.config.cjs",
+    "migrate:undo": "npx sequelize-cli db:migrate:undo --config config/sequelize.config.cjs",
+    "migrate:undo:all": "npx sequelize-cli db:migrate:undo:all --config config/sequelize.config.cjs",
+    "seed:admin": "npx sequelize-cli db:seed --seed XXXXXXXXXXXXXX-admin-user.js --config config/sequelize.config.cjs",
+    "seed:all": "npx sequelize-cli db:seed:all --config config/sequelize.config.cjs",
+    "seed:undo:all": "npx sequelize-cli db:seed:undo:all --config config/sequelize.config.cjs",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@arcjet/inspect": "^1.0.0-beta.15",
+    "@arcjet/node": "^1.0.0-beta.15",
+    "@aws-sdk/client-s3": "^3.919.0",
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.2.0",
+    "glob": "^13.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.2",
+    "multer-s3": "^3.0.1",
+    "nodemailer": "^7.0.10",
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.7",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.3"
+  },
+  "description": ""
+}
