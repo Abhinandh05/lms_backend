@@ -27,7 +27,6 @@
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "express-rate-limit": "^8.2.0",
-    "glob": "^13.0.0",
     "jsonwebtoken": "^9.0.2",
     "multer": "^2.0.2",
     "multer-s3": "^3.0.1",
@@ -41,6 +40,9 @@
   },
   "devDependencies": {
     "sequelize-cli": "^6.6.3"
+  },
+  "overrides": {
+    "glob": "^10.4.5"
   },
   "description": ""
 }
